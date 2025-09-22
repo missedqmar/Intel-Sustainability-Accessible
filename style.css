@@ -1,9 +1,21 @@
 :root {
   --brand-blue: #0071c5;
   --muted: #505050;
-  --link-color: #005091; /* Darker blue for better contrast */
-  --bg-light-custom: #f0f0f0; /* Slightly darker than Bootstrap's bg-light */
-  --text-on-light: #333333; /* Darker text for light backgrounds */
+  --link-color: #005091;
+  --bg-light-custom: #f0f0f0;
+  --text-on-light: #333333;
+  --body-bg: #ffffff;
+  --card-bg: #dde8fc;
+  --text-color: #333333;
+}
+
+body.dark-mode {
+  --bg-light-custom: #1e1e1e;
+  --text-on-light: #e0e0e0;
+  --body-bg: #121212;
+  --card-bg: #2d3748;
+  --text-color: #e0e0e0;
+  --link-color: #5ea8e6;
 }
 
 body {
@@ -14,6 +26,11 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/webp/bg.webp');
 }
 
 .hero {
@@ -22,7 +39,6 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Improved contrast for links */
 a {
   color: var(--link-color);
   text-decoration: underline;
@@ -30,10 +46,9 @@ a {
 }
 
 a:hover {
-  color: #003b6e; /* Even darker on hover */
+  color: #003b6e;
 }
 
-/* Custom background for sections with bg-light */
 section.py-5.bg-light {
   background-color: var(--bg-light-custom) !important;
 }
@@ -42,7 +57,6 @@ section.py-5.bg-light .text-muted {
   color: var(--text-on-light) !important;
 }
 
-/* Make sure all text in this section has good contrast */
 section.py-5.bg-light h2,
 section.py-5.bg-light p,
 section.py-5.bg-light small {
@@ -53,15 +67,16 @@ section.py-5.bg-light small {
    COMPONENTS
    ========================================================================== */
 
-/* Hero Section */
 .hero .logo {
   background-color: #3064ac;
   padding: 4rem 6rem;
   max-width: 600px;
   height: auto;
+  margin: 0 auto; /* Center the logo container */
+  display: block; /* Ensure it's a block element for margin auto to work */
+  box-sizing: border-box; /* Include padding in width calculation */
 }
 
-/* Timeline Component */
 .timeline {
   display: flex;
   overflow-x: auto;
@@ -72,7 +87,7 @@ section.py-5.bg-light small {
 }
 
 .timeline-card {
-  background: #dde8fc;
+  background: var(--card-bg);
   flex: 0 0 320px;
   margin-right: 2rem;
   scroll-snap-align: start;
@@ -88,18 +103,61 @@ section.py-5.bg-light small {
   overflow: hidden;
   margin: 0;
   transition: max-height 0.3s ease-out, margin 0.3s ease-out;
+  font-family: 'Roboto', -apple-system, "Segoe UI", sans-serif;
+  color: var(--text-on-light);
 }
 
 .timeline img{
-  height: 40%;
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  object-position: center;
   border-radius: 8px;
+}
+
+.timeline-card:hover .timeline-text {
+  max-height: 200px;
+  padding: 0.75rem 0;
+}
+
+.timeline-text p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.timeline-text strong {
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+.timeline-text em {
+  font-style: italic;
+  color: var(--muted);
+}
+
+.timeline-text ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.timeline-text li {
+  margin-bottom: 0.25rem;
+  position: relative;
+}
+
+.timeline-text li::before {
+  content: "•";
+  color: var(--brand-blue);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
 }
 
 .timeline-card:hover .timeline-text {
   max-height: 200px;
 }
 
-/* Future Roadmap Component - Custom styling preserved */
 .roadmap-timeline {
   display: flex;
   justify-content: space-around;
@@ -153,7 +211,6 @@ section.py-5.bg-light small {
   font-weight: bold;
 }
 
-/* Utility Classes */
 .hover-lift {
   transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -161,6 +218,44 @@ section.py-5.bg-light small {
 .hover-lift:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Newsletter Styles */
+.btn-intel {
+  background-color: var(--brand-blue);
+  color: white;
+  border-color: var(--brand-blue);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-intel:hover {
+  background-color: #005da3;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.newsletter-form .form-control {
+  border: 1px solid #ced4da;
+  padding: 0.75rem 1rem;
+}
+
+.newsletter-form .form-control:focus {
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 0.25rem rgba(0, 113, 197, 0.25);
+}
+
+body.dark-mode .newsletter-section {
+  background-color: var(--bg-light-custom) !important;
+}
+
+body.dark-mode .newsletter-form .form-control {
+  background-color: #2d3748;
+  color: var(--text-on-light);
+  border-color: #4a5568;
+}
+
+body.dark-mode .newsletter-form .form-control::placeholder {
+  color: #a0aec0;
 }
 
 /* Media Queries */
@@ -213,4 +308,46 @@ section.py-5.bg-light small {
     max-width: 100%;
     height: auto;
   }
+
+  .hero .logo {
+    padding: 2rem 3rem; /* Reduce padding on smaller screens */
+    max-width: 90%; /* Prevent touching edges by limiting width */
+  }
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--brand-blue);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+body.dark-mode .card {
+  background-color: var(--card-bg);
+  color: var(--text-on-light);
+}
+
+body.dark-mode .text-muted {
+  color: #b0b0b0 !important;
+}
+
+body.dark-mode .text-primary {
+  color: #5ea8e6 !important;
 }

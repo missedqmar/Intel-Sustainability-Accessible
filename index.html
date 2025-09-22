@@ -13,9 +13,14 @@
 </head>
 
 <body>
+  <!-- Dark Mode Toggle Button -->
+  <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+    <i class="bi bi-moon-fill"></i>
+  </button>
+
   <!-- Header / Hero Section -->
   <header class="hero">
-    <div class="container py-5">
+    <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
           <img src="img/intel-header-logo.svg" alt="Intel Logo" class="logo mb-4" width="600" height="200" />
@@ -28,7 +33,7 @@
 
   <!-- Timeline Cards Section -->
   <main>
-    <section class="timeline-section py-5">
+    <section class="timeline-section">
       <div class="container-fluid">
         <div class="timeline">
           <!-- Card 1: 1968 -->
@@ -136,7 +141,7 @@
               <h3>Renewable Electricity</h3>
               <img src="img/webp/8.webp" alt="Wind turbines for renewable energy" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
               <p class="timeline-text">
-                The company achieves 99% renewable electricity usage worldwide,
+                The company achieves 98% renewable electricity usage worldwide,
                 helping to drastically lower carbon emissions and driving progress
                 toward Intel's long-term sustainability goals.
               </p>
@@ -177,11 +182,19 @@
           <!-- Carbon & Energy -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h3 class="h5 mb-3"><i class="bi bi-lightning-charge"></i> Carbon & Energy</h3>
-                <p class="display-3 text-primary fw-bold">99%</p>
+                <p class="display-3 text-primary fw-bold">98%</p>
                 <p class="text-muted mb-3">Renewable Energy Usage</p>
-                <small class="text-muted">Source: Intel CR Report 2024</small>
+                <small class="text-muted mb-3">Source: Intel CR Report 2024</small>
+                <div class="mt-auto">
+                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/climate-change.html" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-arrow-up-right-square"></i> Learn More
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -189,11 +202,19 @@
           <!-- Water Stewardship -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h3 class="h5 mb-3"><i class="bi bi-droplet"></i> Water Stewardship</h3>
                 <p class="display-3 text-primary fw-bold">100B+</p>
                 <p class="text-muted mb-3">Gallons of Water Conserved</p>
-                <small class="text-muted">Source: Intel ESG Report</small>
+                <small class="text-muted mb-3">Source: Intel ESG Report</small>
+                <div class="mt-auto">
+                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/water-stewardship.html" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-arrow-up-right-square"></i> Learn More
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -201,11 +222,19 @@
           <!-- Waste & Circular Economy -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h3 class="h5 mb-3"><i class="bi bi-recycle"></i> Waste & Circular Economy</h3>
-                <p class="display-3 text-primary fw-bold">95%</p>
-                <p class="text-muted mb-3">Waste Diverted from Landfills</p>
-                <small class="text-muted">Source: Intel Environmental Progress Reports</small>
+                <p class="display-3 text-primary fw-bold">75K</p>
+                <p class="text-muted mb-3">Tons of Waste Diverted from Landfills</p>
+                <small class="text-muted mb-3">Source: Intel Environmental Progress Reports</small>
+                <div class="mt-auto">
+                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/circular-economy.html" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-arrow-up-right-square"></i> Learn More
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -213,11 +242,19 @@
           <!-- Supply Chain Impact -->
           <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h3 class="h5 mb-3"><i class="bi bi-box-seam"></i> Supply Chain</h3>
                 <p class="display-3 text-primary fw-bold">98.5%</p>
                 <p class="text-muted mb-3">Conflict-Free Minerals</p>
-                <small class="text-muted">Source: Intel Supplier Responsibility Reports</small>
+                <small class="text-muted mb-3">Source: Intel Supplier Responsibility Reports</small>
+                <div class="mt-auto">
+                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/supply-chain.html" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-arrow-up-right-square"></i> Learn More
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -266,10 +303,50 @@
         </div>
       </div>
     </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="py-5 bg-light newsletter-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="display-5 text-primary mb-3"><i class="bi bi-envelope"></i> Stay Informed</h2>
+            <p class="lead text-muted mb-4">Subscribe to our newsletter for the latest updates on Intel's sustainability initiatives and progress.</p>
+            
+            <form class="newsletter-form">
+              <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
+                <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email address" required>
+                <button class="btn btn-intel" type="submit">Subscribe</button>
+              </div>
+              <p class="text-muted small mt-2">We respect your privacy and will never share your information.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      const icon = darkModeToggle.querySelector('i');
+      
+      darkModeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        
+        if (document.body.classList.contains('dark-mode')) {
+          icon.classList.remove('bi-moon-fill');
+          icon.classList.add('bi-sun-fill');
+        } else {
+          icon.classList.remove('bi-sun-fill');
+          icon.classList.add('bi-moon-fill');
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
