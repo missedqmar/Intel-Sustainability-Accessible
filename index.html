@@ -5,244 +5,271 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Intel: Sustainability Through the Ages</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
   <!-- Header / Hero Section -->
-  <header class="hero text-center">
-    <div class="hero-content">
-      <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
-      <img src="img/intel-header-logo.svg" alt="Intel Logo" class="logo" />
-      <!-- Main Heading -->
-      <h1>Sustainability Through the Ages</h1>
-
-      <!-- Subheading / Description -->
-      <p class="text-muted">Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.</p>
+  <header class="hero">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <img src="img/intel-header-logo.svg" alt="Intel Logo" class="logo mb-4" width="600" height="200" />
+          <h1 class="display-4">Sustainability Through the Ages</h1>
+          <p class="lead text-muted">Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.</p>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Timeline Cards Section -->
   <main>
-    <section class="timeline">
+    <section class="timeline-section py-5">
+      <div class="container-fluid">
+        <div class="timeline">
+          <!-- Card 1: 1968 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>1968</h2>
+              <h3>Intel Founded</h3>
+              <img src="img/webp/1.webp" alt="Early Intel office" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Robert Noyce and Gordon Moore rename the newly formed company
+                NM Electronics to Intel Corporation, laying the foundation for
+                decades of technological innovation.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Card 2: 1971 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>1971</h2>
+              <h3>First Microprocessor</h3>
+              <img src="img/webp/2.webp" alt="Intel 4004 microprocessor" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Intel debuts the 4004, the world's first commercial microprocessor,
+                igniting the microprocessor revolution and propelling the future
+                of computing devices.
+              </p>
+            </div>
+          </div>
 
-      <!-- Card 1: 1968 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>1968</h2>
-          <h3>Intel Founded</h3>
-          <img src="img/1.jpg" alt="Early Intel office" />
-          <p>
-            Robert Noyce and Gordon Moore rename the newly formed company
-            NM Electronics to Intel Corporation, laying the foundation for
-            decades of technological innovation.
-          </p>
+          <!-- Card 3: 1978 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>1978</h2>
+              <h3>8086 Processor</h3>
+              <img src="img/webp/3.webp" alt="Intel 8086 processor chip" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Launch of the 8086 processor, establishing the x86 architecture
+                that drives countless PCs and servers in the modern era.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: 1985 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>1985</h2>
+              <h3>386 Processor</h3>
+              <img src="img/webp/4.webp" alt="Intel 386 processor chip" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Intel introduces the 386 processor with 32-bit architecture,
+                ushering in a new era of performance and multitasking for
+                personal computers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: 2006 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>2006</h2>
+              <h3>Peak GHG Emissions</h3>
+              <img src="img/webp/5.webp" alt="Factory with emissions" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                This year marks Intel's highest annual greenhouse gas emissions
+                for operations. Over subsequent years, Intel invests heavily in
+                chemical abatement, renewable energy, and energy-efficient
+                manufacturing to reverse this trend.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6: 2020 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>2020</h2>
+              <h3>RISE Strategy</h3>
+              <img src="img/webp/6.webp" alt="RISE strategy graphic" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Intel launches its RISE (Responsible, Inclusive, Sustainable,
+                Enabling) strategy and 2030 goals, aiming to drive industry-wide
+                progress on climate action, water stewardship, and waste reduction.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 7: 2022 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>2022</h2>
+              <h3>Net-Zero By 2040</h3>
+              <img src="img/webp/7.webp" alt="Net-zero graphic" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Intel announces its commitment to achieve net-zero greenhouse
+                gas emissions (Scope 1 and 2) across its global operations
+                by 2040, building on years of environmental initiatives.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 8: 2023 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>2023</h2>
+              <h3>Renewable Electricity</h3>
+              <img src="img/webp/8.webp" alt="Wind turbines for renewable energy" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                The company achieves 99% renewable electricity usage worldwide,
+                helping to drastically lower carbon emissions and driving progress
+                toward Intel's long-term sustainability goals.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 9: 2024 -->
+          <div class="timeline-card card shadow-sm">
+            <div class="card-body">
+              <h2>2024</h2>
+              <h3>Sustainability Summit</h3>
+              <img src="img/webp/9.webp" alt="People at a summit" class="img-fluid rounded mb-3" width="800" height="450" loading="lazy" />
+              <p class="timeline-text">
+                Intel hosts its first Sustainability Summit, uniting suppliers,
+                government officials, and industry leaders to collaborate on
+                next-generation sustainable semiconductor manufacturing.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Card 2: 1971 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>1971</h2>
-          <h3>First Microprocessor</h3>
-          <img src="img/2.jpg" alt="Intel 4004 microprocessor" />
-          <p>
-            Intel debuts the 4004, the world's first commercial microprocessor,
-            igniting the microprocessor revolution and propelling the future
-            of computing devices.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3: 1978 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>1978</h2>
-          <h3>8086 Processor</h3>
-          <img src="img/3.jpg" alt="Intel 8086 processor chip" />
-          <p>
-            Launch of the 8086 processor, establishing the x86 architecture
-            that drives countless PCs and servers in the modern era.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 4: 1985 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>1985</h2>
-          <h3>386 Processor</h3>
-          <img src="img/4.jpg" alt="Intel 386 processor chip" />
-          <p>
-            Intel introduces the 386 processor with 32-bit architecture,
-            ushering in a new era of performance and multitasking for
-            personal computers.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 5: 2006 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>2006</h2>
-          <h3>Peak GHG Emissions</h3>
-          <img src="img/5.png" alt="Factory with emissions" />
-          <p>
-            This year marks Intel's highest annual greenhouse gas emissions
-            for operations. Over subsequent years, Intel invests heavily in
-            chemical abatement, renewable energy, and energy-efficient
-            manufacturing to reverse this trend.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 6: 2020 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>2020</h2>
-          <h3>RISE Strategy</h3>
-          <img src="img/6.png" alt="RISE strategy graphic" />
-          <p>
-            Intel launches its RISE (Responsible, Inclusive, Sustainable,
-            Enabling) strategy and 2030 goals, aiming to drive industry-wide
-            progress on climate action, water stewardship, and waste reduction.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 7: 2022 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>2022</h2>
-          <h3>Net-Zero By 2040</h3>
-          <img src="img/7.png" alt="Net-zero graphic" />
-          <p>
-            Intel announces its commitment to achieve net-zero greenhouse
-            gas emissions (Scope 1 and 2) across its global operations
-            by 2040, building on years of environmental initiatives.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 8: 2023 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>2023</h2>
-          <h3>Renewable Electricity</h3>
-          <img src="img/8.png" alt="Wind turbines for renewable energy" />
-          <p>
-            The company achieves 99% renewable electricity usage worldwide,
-            helping to drastically lower carbon emissions and driving progress
-            toward Intel's long-term sustainability goals.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 9: 2024 -->
-      <div class="timeline-card card-base hover-lift card-spacing">
-        <div class="card-content">
-          <h2>2024</h2>
-          <h3>Sustainability Summit</h3>
-          <img src="img/9.png" alt="People at a summit" />
-          <p>
-            Intel hosts its first Sustainability Summit, uniting suppliers,
-            government officials, and industry leaders to collaborate on
-            next-generation sustainable semiconductor manufacturing.
-          </p>
-        </div>
-      </div>
+      <p class="text-center text-muted mt-3 scroll-hint"><i class="bi bi-arrow-left-right"></i> Scroll to view timeline | Hover over cards to learn more!</p>
     </section>
-    <p class="scroll-hint text-center text-muted">Scroll to view timeline | Hover over cards to learn more!</p>
-
     
     <!-- Impact Dashboard Section -->
-    <section class="impact-dashboard container">
-
-      <div class="section-header text-center">
-        <h2 class="text-brand">Our Impact Today</h2>
-        <p class="text-muted">
-          A snapshot of our progress towards our 2030 and 2040 sustainability goals.
-          All data is based on <a
-            href="https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility-report.html"
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 text-primary"><i class="bi bi-bar-chart-line"></i> Our Impact Today</h2>
+          <p class="lead text-muted">
+            A snapshot of our progress towards our 2030 and 2040 sustainability goals.
+            All data is based on <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/corporate-responsibility-report.html" 
             target="_blank" rel="noopener">Intel's public reports</a>.
-        </p>
-      </div>
-      <div class="impact-grid text-center">
-        <!-- Carbon & Energy -->
-        <div class="impact-card card-base hover-lift card-spacing">
-          <h3 class="mb-md">Carbon & Energy</h3>
-          <p class="impact-metric text-brand">99%</p>
-          <p class="impact-description text-muted mb-md">Renewable Energy Usage</p>
-          <small>Source: Intel CR Report 2024</small>
+          </p>
         </div>
-        <!-- Water Stewardship -->
-        <div class="impact-card card-base hover-lift card-spacing">
-          <h3 class="mb-md">Water Stewardship</h3>
-          <p class="impact-metric text-brand">100B+</p>
-          <p class="impact-description text-muted mb-md">Gallons of Water Conserved</p>
-          <small>Source: Intel ESG Report</small>
-        </div>
-        <!-- Waste & Circular Economy -->
-        <div class="impact-card card-base hover-lift card-spacing">
-          <h3 class="mb-md">Waste & Circular Economy</h3>
-          <p class="impact-metric text-brand">95%</p>
-          <p class="impact-description text-muted mb-md">Waste Diverted from Landfills</p>
-          <small>Source: Intel Environmental Progress Reports</small>
-        </div>
-        <!-- Supply Chain Impact -->
-        <div class="impact-card card-base hover-lift card-spacing">
-          <h3 class="mb-md">Supply Chain</h3>
-          <p class="impact-metric text-brand">98.5%</p>
-          <p class="impact-description text-muted mb-md">Conflict-Free Minerals</p>
-          <small>Source: Intel Supplier Responsibility Reports</small>
+        
+        <div class="row text-center g-4">
+          <!-- Carbon & Energy -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h3 class="h5 mb-3"><i class="bi bi-lightning-charge"></i> Carbon & Energy</h3>
+                <p class="display-3 text-primary fw-bold">99%</p>
+                <p class="text-muted mb-3">Renewable Energy Usage</p>
+                <small class="text-muted">Source: Intel CR Report 2024</small>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Water Stewardship -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h3 class="h5 mb-3"><i class="bi bi-droplet"></i> Water Stewardship</h3>
+                <p class="display-3 text-primary fw-bold">100B+</p>
+                <p class="text-muted mb-3">Gallons of Water Conserved</p>
+                <small class="text-muted">Source: Intel ESG Report</small>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Waste & Circular Economy -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h3 class="h5 mb-3"><i class="bi bi-recycle"></i> Waste & Circular Economy</h3>
+                <p class="display-3 text-primary fw-bold">95%</p>
+                <p class="text-muted mb-3">Waste Diverted from Landfills</p>
+                <small class="text-muted">Source: Intel Environmental Progress Reports</small>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Supply Chain Impact -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-body">
+                <h3 class="h5 mb-3"><i class="bi bi-box-seam"></i> Supply Chain</h3>
+                <p class="display-3 text-primary fw-bold">98.5%</p>
+                <p class="text-muted mb-3">Conflict-Free Minerals</p>
+                <small class="text-muted">Source: Intel Supplier Responsibility Reports</small>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Future Roadmap Section -->
-    <section class="roadmap container">
-      <div class="section-header text-center">
-        <h2 class="text-brand">Our Path Forward</h2>
-        <p class="text-muted">Our ambitious goals driving sustainable innovation through 2040.</p>
-      </div>
-      <div class="roadmap-timeline">
-        <!-- 2030 Goals -->
-        <div class="roadmap-milestone">
-          <div class="milestone-year">2030</div>
-          <div class="milestone-card card-base hover-lift card-spacing">
-            <div class="card-content">
-              <h4 class="milestone-heading">Key Goals</h4>
-              <ul>
-                <li class="milestone-item mb-sm">Achieve 100% renewable energy use in global manufacturing.</li>
-                <li class="milestone-item mb-sm">Implement water conservation projects projected to restore over 100% of our freshwater use.</li>
-                <li class="milestone-item mb-sm">Create a "net positive" waste-to-landfill strategy.</li>
-              </ul>
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="display-5 text-primary"><i class="bi bi-map"></i> Our Path Forward</h2>
+          <p class="lead text-muted">Our ambitious goals driving sustainable innovation through 2040.</p>
+        </div>
+        
+        <div class="roadmap-timeline">
+          <!-- 2030 Goals -->
+          <div class="roadmap-milestone">
+            <div class="milestone-year">2030</div>
+            <div class="card shadow-sm hover-lift">
+              <div class="card-body">
+                <h3 class="h4"><i class="bi bi-bullseye"></i> Key Goals</h3>
+                <ul class="list-unstyled">
+                  <li class="milestone-item mb-2">Achieve 100% renewable energy use in global manufacturing.</li>
+                  <li class="milestone-item mb-2">Implement water conservation projects projected to restore over 100% of our freshwater use.</li>
+                  <li class="milestone-item mb-2">Create a "net positive" waste-to-landfill strategy.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 2040 Goals -->
+          <div class="roadmap-milestone">
+            <div class="milestone-year">2040</div>
+            <div class="card shadow-sm hover-lift">
+              <div class="card-body">
+                <h3 class="h4"><i class="bi bi-globe"></i> Net-Zero Vision</h3>
+                <ul class="list-unstyled">
+                  <li class="milestone-item mb-2">Achieve net-zero greenhouse gas emissions across all global operations.</li>
+                  <li class="milestone-item mb-2">Develop and deploy carbon-capture technologies at scale.</li>
+                  <li class="milestone-item mb-2">Establish a fully circular supply chain with zero waste.</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-        <!-- 2040 Goals -->
-        <div class="roadmap-milestone">
-          <div class="milestone-year">2040</div>
-          <div class="milestone-card card-base hover-lift card-spacing">
-            <div class="card-content">
-              <h4 class="milestone-heading">Net-Zero Vision</h4>
-              <ul>
-                <li class="milestone-item mb-sm">Achieve net-zero greenhouse gas emissions across all global operations.</li>
-                <li class="milestone-item mb-sm">Develop and deploy carbon-capture technologies at scale.</li>
-                <li class="milestone-item mb-sm">Establish a fully circular supply chain with zero waste.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
-
   </main>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

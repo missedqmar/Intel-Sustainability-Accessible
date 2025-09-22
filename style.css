@@ -1,209 +1,112 @@
 :root {
   --brand-blue: #0071c5;
-  --surface: #f0f0f0;
-  --text: #1d1d1d;
-  --muted: #070505;
-  --radius: 4px;
-  --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
-  --success-green: #22c55e;
-  --light-gray: #999;
-  --border-light: #e0e0e0;
-  --timeline-bg: #dde8fc;
-
-  /* Sizing & Spacing */
-  --section-padding: 3rem 1rem;
-  --max-content-width: 1200px;
-  --text-max-width: 60ch;
-  --heading-large: 2.5rem;
-  --font-size-md: 1.2rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-xxl: 3rem;
+  --muted: #505050;
+  --link-color: #005091; /* Darker blue for better contrast */
+  --bg-light-custom: #f0f0f0; /* Slightly darker than Bootstrap's bg-light */
+  --text-on-light: #333333; /* Darker text for light backgrounds */
 }
 
 body {
   font-family: 'Roboto', -apple-system, "Segoe UI", sans-serif;
   margin: 0;
-  background-image: url('img/bg.png');
+  line-height: 1.6;
+  background-image: url('img/webp/bg.webp');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  color: var(--text);
-  line-height: 1.6;
+}
+
+.hero {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Improved contrast for links */
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #003b6e; /* Even darker on hover */
+}
+
+/* Custom background for sections with bg-light */
+section.py-5.bg-light {
+  background-color: var(--bg-light-custom) !important;
+}
+
+section.py-5.bg-light .text-muted {
+  color: var(--text-on-light) !important;
+}
+
+/* Make sure all text in this section has good contrast */
+section.py-5.bg-light h2,
+section.py-5.bg-light p,
+section.py-5.bg-light small {
+  color: var(--text-on-light);
 }
 
 /* ==========================================================================
    COMPONENTS
    ========================================================================== */
 
-/* Hero Component */
-.hero {
-  padding: 4rem 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.hero-content .logo {
+/* Hero Section */
+.hero .logo {
   background-color: #3064ac;
-  padding: 3rem 1.5rem;
-  width: 500px;
-  margin-bottom: var(--spacing-md);
-}
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  margin: var(--spacing-sm) 0;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: var(--text-max-width);
-  margin: var(--spacing-md) auto 0;
-}
-
-main {
-  padding: var(--spacing-xl) 0;
-}
-
-/* Card Component */
-.card-base {
-  background: #fff;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.card-content {
-  padding: var(--spacing-lg);
-}
-
-.card-content h2,
-.card-content h3 {
-  margin: 0 0 1rem;
-  color: var(--text);
-}
-
-.card-content h2 {
-  font-size: 1.75rem;
-  color: var(--brand-blue);
-  margin-bottom: 0.25rem;
-}
-
-.card-content h3 {
-  font-size: var(--font-size-md);
-}
-
-.card-content img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: var(--radius);
-  margin-bottom: var(--spacing-md);
-}
-
-.card-content p {
-  font-size: 0.95rem;
-  color: var(--muted);
-  max-height: 0;
-  overflow: hidden;
-  margin: 0;
-  transition: max-height 0.3s ease-out, margin 0.3s ease-out;
+  padding: 4rem 6rem;
+  max-width: 600px;
+  height: auto;
 }
 
 /* Timeline Component */
 .timeline {
   display: flex;
   overflow-x: auto;
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: 2rem 1rem;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
 .timeline-card {
-  background: var(--timeline-bg);
+  background: #dde8fc;
   flex: 0 0 320px;
-  margin-right: var(--spacing-md);
+  margin-right: 2rem;
   scroll-snap-align: start;
 }
 
-.timeline-card:last-child {
-  margin-right: 0;
-}
-
-.timeline-card:hover .card-content p {
-  max-height: 200px;
-  margin-top: var(--spacing-md);
-}
-
-.scroll-hint {
-  font-style: italic;
-  margin-top: var(--spacing-md);
-}
-
-/* Section Header Component */
-.section-header {
-  margin-bottom: var(--spacing-xxl);
-}
-
-.section-header h2 {
-  font-size: var(--heading-large);
-  margin-bottom: var(--spacing-sm);
-}
-
-.section-header p {
-  font-size: 1.1rem;
-  max-width: var(--text-max-width);
-  margin: 0 auto;
-}
-
-/* Impact Dashboard Component */
-.impact-dashboard {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.impact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--spacing-lg);
-}
-
-.impact-card {
-  padding: var(--spacing-xl) var(--spacing-md);
-}
-
-.impact-card h3 {
-  font-size: var(--font-size-md);
-  color: var(--text);
-}
-
-.impact-card .impact-metric {
-  font-size: 3rem;
+.timeline-card h2 {
+  color: var(--brand-blue);
   font-weight: 700;
+}
+
+.timeline-text {
+  max-height: 0;
+  overflow: hidden;
   margin: 0;
+  transition: max-height 0.3s ease-out, margin 0.3s ease-out;
 }
 
-.impact-card .impact-description {
-  font-size: 1rem;
+.timeline img{
+  height: 40%;
+  border-radius: 8px;
 }
 
-.impact-card small {
-  font-size: 0.8rem;
-  color: var(--light-gray);
+.timeline-card:hover .timeline-text {
+  max-height: 200px;
 }
 
-/* Future Roadmap Component */
-.roadmap .roadmap-timeline {
+/* Future Roadmap Component - Custom styling preserved */
+.roadmap-timeline {
   display: flex;
   justify-content: space-around;
   position: relative;
 }
 
-.roadmap .roadmap-timeline::before {
+.roadmap-timeline::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -214,44 +117,32 @@ main {
   z-index: -1;
 }
 
-.roadmap .roadmap-milestone {
+.roadmap-milestone {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 45%;
 }
 
-.roadmap .milestone-year {
+.milestone-year {
   background: var(--brand-blue);
   color: #fff;
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: 0.5rem 1.5rem;
   border-radius: 20px;
   font-size: 1.5rem;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: 1.5rem;
   border: 3px solid #fff;
   box-shadow: 0 0 0 4px var(--brand-blue);
 }
 
-.roadmap .milestone-card {
-  border: 1px solid var(--border-light);
+.roadmap-milestone .card {
   border-left: 5px solid var(--brand-blue);
   width: 100%;
 }
 
-.milestone-heading {
-  margin: 0 0 var(--spacing-md);
-  font-size: 1.25rem;
-}
-
-.roadmap .milestone-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .milestone-item {
   position: relative;
-  padding-left: var(--spacing-lg);
+  padding-left: 1.5rem;
 }
 
 .milestone-item::before {
@@ -262,75 +153,22 @@ main {
   font-weight: bold;
 }
 
-.status-achieved {
-  color: var(--success-green);
-  font-weight: bold;
-  margin-left: 0.5rem;
-}
-
-/* ==========================================================================
-   UTILITY CLASSES
-   ========================================================================== */
-.container {
-  max-width: var(--max-content-width);
-  margin: var(--spacing-xl) auto;
-  padding: var(--section-padding);
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-brand {
-  color: var(--brand-blue);
-}
-
-.text-muted {
-  color: var(--muted);
-}
-
-.mb-sm {
-  margin-bottom: var(--spacing-sm);
-}
-
-.mb-md {
-  margin-bottom: var(--spacing-md);
-}
-
-.mb-lg {
-  margin-bottom: var(--spacing-lg);
-}
-
-.card-spacing {
-  padding: var(--spacing-lg);
-}
-
+/* Utility Classes */
 .hover-lift {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ==========================================================================
-   MEDIA QUERIES
-   ========================================================================== */
+/* Media Queries */
 @media (max-width: 768px) {
-
-  /* Timeline Component */
   .timeline {
     flex-direction: column;
     overflow-x: hidden;
     align-items: center;
-    padding: var(--spacing-md);
   }
 
   .timeline-card {
@@ -338,16 +176,12 @@ main {
     width: 100%;
     max-width: 400px;
     margin-right: 0;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 1.5rem;
   }
 
-  .timeline-card:last-child {
-    margin-bottom: 0;
-  }
-
-  .card-content p {
+  .timeline-text {
     max-height: 200px;
-    margin-top: var(--spacing-md);
+    margin-top: 1rem;
   }
 
   .scroll-hint {
@@ -373,5 +207,10 @@ main {
     width: 100%;
     max-width: 400px;
     margin-bottom: 2rem;
+  }
+
+  .timeline-card img {
+    max-width: 100%;
+    height: auto;
   }
 }
