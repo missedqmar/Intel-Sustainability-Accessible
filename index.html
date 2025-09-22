@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
   <meta charset="UTF-8" />
@@ -47,6 +47,9 @@
                 NM Electronics to Intel Corporation, laying the foundation for
                 decades of technological innovation.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal1968">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
           
@@ -61,6 +64,9 @@
                 igniting the microprocessor revolution and propelling the future
                 of computing devices.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal1971">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -74,6 +80,9 @@
                 Launch of the 8086 processor, establishing the x86 architecture
                 that drives countless PCs and servers in the modern era.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal1978">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -88,6 +97,9 @@
                 ushering in a new era of performance and multitasking for
                 personal computers.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal1985">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -103,6 +115,9 @@
                 chemical abatement, renewable energy, and energy-efficient
                 manufacturing to reverse this trend.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal2006">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -117,6 +132,9 @@
                 Enabling) strategy and 2030 goals, aiming to drive industry-wide
                 progress on climate action, water stewardship, and waste reduction.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal2020">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -131,6 +149,9 @@
                 gas emissions (Scope 1 and 2) across its global operations
                 by 2040, building on years of environmental initiatives.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal2022">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -145,6 +166,9 @@
                 helping to drastically lower carbon emissions and driving progress
                 toward Intel's long-term sustainability goals.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal2023">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
 
@@ -159,14 +183,17 @@
                 government officials, and industry leaders to collaborate on
                 next-generation sustainable semiconductor manufacturing.
               </p>
+              <button class="btn btn-sm btn-intel mt-2" data-bs-toggle="modal" data-bs-target="#modal2024">
+                Learn More <i class="bi bi-arrows-fullscreen"></i>
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <p class="text-center text-muted mt-3 scroll-hint"><i class="bi bi-arrow-left-right"></i> Scroll to view timeline | Hover over cards to learn more!</p>
+      <p class="text-center text-muted mt-3 scroll-hint"><i class="bi bi-arrow-left-right"></i> Scroll to view timeline | Click "Learn More" for details!</p>
     </section>
     
-    <!-- Impact Dashboard Section -->
+    <!-- Impact Dashboard Section - Carousel -->
     <section class="py-5 bg-light">
       <div class="container">
         <div class="text-center mb-5">
@@ -178,87 +205,116 @@
           </p>
         </div>
         
-        <div class="row text-center g-4">
-          <!-- Carbon & Energy -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-3"><i class="bi bi-lightning-charge"></i> Carbon & Energy</h3>
-                <p class="display-3 text-primary fw-bold">98%</p>
-                <p class="text-muted mb-3">Renewable Energy Usage</p>
-                <small class="text-muted mb-3">Source: Intel CR Report 2024</small>
-                <div class="mt-auto">
-                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/climate-change.html" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-arrow-up-right-square"></i> Learn More
-                  </a>
+        <!-- Impact Carousel -->
+        <div id="impactCarousel" class="carousel slide shadow-sm" data-bs-ride="carousel" data-bs-interval="5000">
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#impactCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Carbon & Energy"></button>
+            <button type="button" data-bs-target="#impactCarousel" data-bs-slide-to="1" aria-label="Water Stewardship"></button>
+            <button type="button" data-bs-target="#impactCarousel" data-bs-slide-to="2" aria-label="Waste & Circular Economy"></button>
+            <button type="button" data-bs-target="#impactCarousel" data-bs-slide-to="3" aria-label="Supply Chain"></button>
+          </div>
+          
+          <!-- Carousel Slides -->
+          <div class="carousel-inner">
+            <!-- Carbon & Energy Slide -->
+            <div class="carousel-item active">
+              <!-- Use Bootstrap utility classes instead of custom CSS classes -->
+              <div class="d-flex flex-column align-items-center text-center p-5" style="min-height: 500px; background-color: var(--card-bg); color: var(--text-color);">
+                <!-- Replace custom impact-icon class with Bootstrap utilities -->
+                <div class="rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 100px; height: 100px; background-color: rgba(0, 113, 197, 0.1);">
+                  <i class="bi bi-lightning-charge display-1 text-primary"></i>
                 </div>
+                <h3 class="h3 mb-3">Carbon & Energy</h3>
+                <p class="display-1 text-primary fw-bold mb-0">98%</p>
+                <p class="lead text-muted mb-4">Renewable Energy Usage Globally</p>
+                <p class="mb-4">Intel's commitment to renewable energy has resulted in significant reductions in our carbon footprint. By powering our operations with clean energy, we're helping to combat climate change.</p>
+                <small class="text-muted mb-4">Source: Intel CR Report 2024</small>
+                <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/climate-change.html" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-outline-primary">
+                  <i class="bi bi-arrow-up-right-square"></i> Learn More
+                </a>
+              </div>
+            </div>
+            
+            <!-- Water Stewardship Slide -->
+            <div class="carousel-item">
+              <div class="impact-card d-flex flex-column align-items-center text-center p-5">
+                <div class="impact-icon mb-3">
+                  <i class="bi bi-droplet display-1 text-primary"></i>
+                </div>
+                <h3 class="h3 mb-3">Water Stewardship</h3>
+                <p class="display-1 text-primary fw-bold mb-0">100B+</p>
+                <p class="lead text-muted mb-4">Gallons of Water Conserved</p>
+                <p class="mb-4">Water is essential to semiconductor manufacturing. Our conservation efforts and community projects are helping to ensure sustainable water resources for future generations.</p>
+                <small class="text-muted mb-4">Source: Intel ESG Report</small>
+                <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/water-stewardship.html" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-outline-primary">
+                  <i class="bi bi-arrow-up-right-square"></i> Learn More
+                </a>
+              </div>
+            </div>
+            
+            <!-- Waste & Circular Economy Slide -->
+            <div class="carousel-item">
+              <div class="impact-card d-flex flex-column align-items-center text-center p-5">
+                <div class="impact-icon mb-3">
+                  <i class="bi bi-recycle display-1 text-primary"></i>
+                </div>
+                <h3 class="h3 mb-3">Waste & Circular Economy</h3>
+                <p class="display-1 text-primary fw-bold mb-0">75K</p>
+                <p class="lead text-muted mb-4">Tons of Waste Diverted from Landfills</p>
+                <p class="mb-4">We're working toward zero waste to landfill across our global operations. Through reuse, recycling, and innovative waste management, we're reducing our environmental footprint.</p>
+                <small class="text-muted mb-4">Source: Intel Environmental Progress Reports</small>
+                <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/circular-economy.html" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-outline-primary">
+                  <i class="bi bi-arrow-up-right-square"></i> Learn More
+                </a>
+              </div>
+            </div>
+            
+            <!-- Supply Chain Impact Slide -->
+            <div class="carousel-item">
+              <div class="impact-card d-flex flex-column align-items-center text-center p-5">
+                <div class="impact-icon mb-3">
+                  <i class="bi bi-box-seam display-1 text-primary"></i>
+                </div>
+                <h3 class="h3 mb-3">Supply Chain</h3>
+                <p class="display-1 text-primary fw-bold mb-0">98.5%</p>
+                <p class="lead text-muted mb-4">Conflict-Free Minerals</p>
+                <p class="mb-4">We're committed to responsible sourcing throughout our supply chain. Our programs help ensure that our products are manufactured with materials obtained through ethical practices.</p>
+                <small class="text-muted mb-4">Source: Intel Supplier Responsibility Reports</small>
+                <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/supply-chain.html" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-outline-primary">
+                  <i class="bi bi-arrow-up-right-square"></i> Learn More
+                </a>
               </div>
             </div>
           </div>
           
-          <!-- Water Stewardship -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-3"><i class="bi bi-droplet"></i> Water Stewardship</h3>
-                <p class="display-3 text-primary fw-bold">100B+</p>
-                <p class="text-muted mb-3">Gallons of Water Conserved</p>
-                <small class="text-muted mb-3">Source: Intel ESG Report</small>
-                <div class="mt-auto">
-                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/water-stewardship.html" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-arrow-up-right-square"></i> Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Waste & Circular Economy -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-3"><i class="bi bi-recycle"></i> Waste & Circular Economy</h3>
-                <p class="display-3 text-primary fw-bold">75K</p>
-                <p class="text-muted mb-3">Tons of Waste Diverted from Landfills</p>
-                <small class="text-muted mb-3">Source: Intel Environmental Progress Reports</small>
-                <div class="mt-auto">
-                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/circular-economy.html" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-arrow-up-right-square"></i> Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Supply Chain Impact -->
-          <div class="col-md-6 col-lg-3">
-            <div class="card h-100 shadow-sm hover-lift">
-              <div class="card-body d-flex flex-column">
-                <h3 class="h5 mb-3"><i class="bi bi-box-seam"></i> Supply Chain</h3>
-                <p class="display-3 text-primary fw-bold">98.5%</p>
-                <p class="text-muted mb-3">Conflict-Free Minerals</p>
-                <small class="text-muted mb-3">Source: Intel Supplier Responsibility Reports</small>
-                <div class="mt-auto">
-                  <a href="https://www.intel.com/content/www/us/en/corporate-responsibility/supply-chain.html" 
-                     target="_blank" 
-                     rel="noopener noreferrer" 
-                     class="btn btn-outline-primary btn-sm">
-                    <i class="bi bi-arrow-up-right-square"></i> Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#impactCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#impactCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
+        
+        <!-- Carousel Navigation Text -->
+        <p class="text-center text-muted mt-3">
+          <i class="bi bi-arrow-left-right"></i> Swipe or use controls to explore our impact areas
+        </p>
       </div>
     </section>
 
@@ -325,28 +381,10 @@
     </section>
   </main>
 
-  <!-- Bootstrap JS -->
+  <!-- JavaScript -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Dark Mode Toggle Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      const icon = darkModeToggle.querySelector('i');
-      
-      darkModeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-        
-        if (document.body.classList.contains('dark-mode')) {
-          icon.classList.remove('bi-moon-fill');
-          icon.classList.add('bi-sun-fill');
-        } else {
-          icon.classList.remove('bi-sun-fill');
-          icon.classList.add('bi-moon-fill');
-        }
-      });
-    });
-  </script>
+  <script src="js/timeline-modals.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

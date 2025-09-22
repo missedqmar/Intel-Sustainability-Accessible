@@ -117,12 +117,6 @@ section.py-5.bg-light small {
 
 .timeline-card:hover .timeline-text {
   max-height: 200px;
-  padding: 0.75rem 0;
-}
-
-.timeline-text p {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
 }
 
 .timeline-text strong {
@@ -135,16 +129,6 @@ section.py-5.bg-light small {
   color: var(--muted);
 }
 
-.timeline-text ul {
-  padding-left: 1.2rem;
-  margin: 0.5rem 0;
-}
-
-.timeline-text li {
-  margin-bottom: 0.25rem;
-  position: relative;
-}
-
 .timeline-text li::before {
   content: "•";
   color: var(--brand-blue);
@@ -152,10 +136,6 @@ section.py-5.bg-light small {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
-}
-
-.timeline-card:hover .timeline-text {
-  max-height: 200px;
 }
 
 .roadmap-timeline {
@@ -258,6 +238,62 @@ body.dark-mode .newsletter-form .form-control::placeholder {
   color: #a0aec0;
 }
 
+/* Modal Styles */
+.modal-content {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  border-bottom: 3px solid var(--brand-blue);
+}
+
+.modal-title {
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+.modal-footer {
+  border-top-color: #eee;
+}
+
+/* Dark mode styles for modals */
+body.dark-mode .modal-content {
+  background-color: var(--card-bg);
+  color: var(--text-on-light);
+}
+
+body.dark-mode .modal-header {
+  border-bottom-color: var(--brand-blue);
+}
+
+body.dark-mode .modal-footer {
+  border-top-color: #2d3748;
+}
+
+body.dark-mode .card.bg-light {
+  background-color: #1a202c !important;
+}
+
+/* RTL Support */
+html[dir="rtl"] .timeline,
+.rtl-layout .timeline {
+  direction: rtl;
+}
+
+html[dir="rtl"] .milestone-item::before,
+.rtl-layout .milestone-item::before {
+  content: '←';
+  right: 0;
+  left: auto;
+}
+
+html[dir="rtl"] .roadmap-milestone .card,
+.rtl-layout .roadmap-milestone .card {
+  border-right: 5px solid var(--brand-blue);
+  border-left: none;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   .timeline {
@@ -310,8 +346,15 @@ body.dark-mode .newsletter-form .form-control::placeholder {
   }
 
   .hero .logo {
-    padding: 2rem 3rem; /* Reduce padding on smaller screens */
-    max-width: 90%; /* Prevent touching edges by limiting width */
+    padding: 2rem 3rem;
+    max-width: 90%; 
+  }
+
+  html[dir="rtl"] .roadmap-timeline::before,
+  .rtl-layout .roadmap-timeline::before {
+    right: 50%;
+    left: auto;
+    transform: translateX(50%);
   }
 }
 
@@ -350,4 +393,77 @@ body.dark-mode .text-muted {
 
 body.dark-mode .text-primary {
   color: #5ea8e6 !important;
+}
+
+/* Impact Carousel Styles */
+#impactCarousel {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+}
+
+.impact-card {
+  min-height: 500px;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  /* Replace with d-flex flex-column align-items-center text-center p-5 in HTML */
+}
+
+.impact-icon {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 113, 197, 0.1);
+  margin: 0 auto;
+  /* Could use Bootstrap's rounded-circle and d-flex justify-content-center align-items-center */
+}
+
+/* Enhanced Carousel Controls with Better Contrast */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 3.5rem;
+  height: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 1;
+  margin: 0 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 2rem;
+  height: 2rem;
+  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5));
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: var(--brand-blue);
+}
+
+/* Dark mode adjustments for carousel */
+body.dark-mode .carousel-control-prev,
+body.dark-mode .carousel-control-next {
+  background-color: rgba(0, 113, 197, 0.9);  /* Use Intel blue with high opacity */
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-mode .carousel-control-prev:hover,
+body.dark-mode .carousel-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-color: var(--brand-blue);
+}
+
+body.dark-mode .carousel-control-prev:hover .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next:hover .carousel-control-next-icon {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(93%) saturate(1881%) hue-rotate(190deg) brightness(94%) contrast(101%);  /* Turns icon to Intel blue */
 }
