@@ -187,7 +187,7 @@ const timelineModalData = [
 function generateTimelineModals() {
   const modalContainer = document.createElement('div');
   modalContainer.className = 'timeline-modals';
-  
+
   timelineModalData.forEach(modal => {
     const modalHTML = `
       <div class="modal fade" id="modal${modal.id}" tabindex="-1" aria-labelledby="modal${modal.id}Label" aria-hidden="true">
@@ -226,10 +226,10 @@ function generateTimelineModals() {
         </div>
       </div>
     `;
-    
+
     modalContainer.innerHTML += modalHTML;
   });
-  
+
   document.body.appendChild(modalContainer);
 }
 
