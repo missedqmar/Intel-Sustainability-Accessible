@@ -72,9 +72,12 @@ section.py-5.bg-light small {
   padding: 4rem 6rem;
   max-width: 600px;
   height: auto;
-  margin: 0 auto; /* Center the logo container */
-  display: block; /* Ensure it's a block element for margin auto to work */
-  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0 auto;
+  /* Center the logo container */
+  display: block;
+  /* Ensure it's a block element for margin auto to work */
+  box-sizing: border-box;
+  /* Include padding in width calculation */
 }
 
 .timeline {
@@ -107,7 +110,7 @@ section.py-5.bg-light small {
   color: var(--text-on-light);
 }
 
-.timeline img{
+.timeline img {
   width: 100%;
   max-height: 200px;
   object-fit: contain;
@@ -347,7 +350,7 @@ html[dir="rtl"] .roadmap-milestone .card,
 
   .hero .logo {
     padding: 2rem 3rem;
-    max-width: 90%; 
+    max-width: 90%;
   }
 
   html[dir="rtl"] .roadmap-timeline::before,
@@ -370,7 +373,7 @@ html[dir="rtl"] .roadmap-milestone .card,
   color: white;
   border: none;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,7 +456,8 @@ body.dark-mode .text-primary {
 /* Dark mode adjustments for carousel */
 body.dark-mode .carousel-control-prev,
 body.dark-mode .carousel-control-next {
-  background-color: rgba(0, 113, 197, 0.9);  /* Use Intel blue with high opacity */
+  background-color: rgba(0, 113, 197, 0.9);
+  /* Use Intel blue with high opacity */
   border-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -465,5 +469,5 @@ body.dark-mode .carousel-control-next:hover {
 
 body.dark-mode .carousel-control-prev:hover .carousel-control-prev-icon,
 body.dark-mode .carousel-control-next:hover .carousel-control-next-icon {
-  filter: brightness(0) saturate(100%) invert(19%) sepia(93%) saturate(1881%) hue-rotate(190deg) brightness(94%) contrast(101%);  /* Turns icon to Intel blue */
+  filter: brightness(0) saturate(100%) invert(19%) sepia(93%) saturate(1881%) hue-rotate(190deg) brightness(94%) contrast(101%);
 }
