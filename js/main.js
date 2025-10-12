@@ -2,7 +2,6 @@
  * Main JavaScript functionality for Intel Sustainability timeline
  * Handles dark mode toggle and RTL support
  */
-
 document.addEventListener('DOMContentLoaded', function () {
   // Dark mode toggle functionality
   const darkModeToggle = document.getElementById('darkModeToggle');
